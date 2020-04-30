@@ -11,19 +11,19 @@ namespace Full_GRASP_And_SOLID
 {
     public class Recipe
     {
-        private IList<Step> steps = new List<Step>();
+        private IList<IStep> steps = new List<IStep>();
 
         public Product FinalProduct { get; set; }
 
         //Se modifica el método AddStep para cumplir con el patrón creator, este método instancia steps.
-        public Step AddStep(Product product, int cuantity, Equipment equipment, int time)
+        public IStep AddStep(Product product, int cuantity, Equipment equipment, int time)
         {
-            Step step = new Step(product, cuantity, equipment, time);
+            IStep step = new Step(product, cuantity, equipment, time);
             steps.Add(step);
             return step;
         }
 
-        public void RemoveStep(Step step)
+        public void RemoveStep(IStep step)
         {
             this.steps.Remove(step);
         }
@@ -32,7 +32,7 @@ namespace Full_GRASP_And_SOLID
         public string GetTextToPrint()
         {
             string result = $"Receta de {this.FinalProduct.Description}:\n";
-            foreach (Step step in this.steps)
+            foreach (IStep step in this.steps)
             {
                 result = result + step.GetTextToPrint() + "\n";
             }
@@ -48,7 +48,7 @@ namespace Full_GRASP_And_SOLID
         {
             double result = 0;
 
-            foreach (Step step in this.steps)
+            foreach (IStep step in this.steps)
             {
                 result = result + step.GetStepCost();
             }
