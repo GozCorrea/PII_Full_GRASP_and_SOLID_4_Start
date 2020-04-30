@@ -15,9 +15,12 @@ namespace Full_GRASP_And_SOLID
 
         public Product FinalProduct { get; set; }
 
-        public void AddStep(Step step)
+        //Se modifica el método AddStep para cumplir con el patrón creator, este método instancia steps.
+        public Step AddStep(Product product, int cuantity, Equipment equipment, int time)
         {
-            this.steps.Add(step);
+            Step step = new Step(product, cuantity, equipment, time);
+            steps.Add(step);
+            return step;
         }
 
         public void RemoveStep(Step step)
