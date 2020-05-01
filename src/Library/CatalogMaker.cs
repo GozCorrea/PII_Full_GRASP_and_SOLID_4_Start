@@ -8,6 +8,7 @@ namespace Full_GRASP_And_SOLID
         public class CatalogMaker
     {
         private List<Product> productCatalog = new List<Product>();
+
         private List<Equipment> equipmentCatalog = new List<Equipment>();
 
         public void AddProductToCatalog(string description, double unitCost)
