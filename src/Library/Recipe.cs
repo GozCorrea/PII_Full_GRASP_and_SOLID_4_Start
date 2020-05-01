@@ -31,6 +31,9 @@ namespace Full_GRASP_And_SOLID
         // Agregado por SRP
         public string GetTextToPrint()
         {
+            Console.WriteLine("-----------------");
+            Console.WriteLine(this.FinalProduct.Description);
+            Console.WriteLine("-----------------");
             string result = $"Receta de {this.FinalProduct.Description}:\n";
             foreach (IStep step in this.steps)
             {
