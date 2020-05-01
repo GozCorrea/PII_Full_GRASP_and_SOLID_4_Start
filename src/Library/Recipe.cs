@@ -15,7 +15,7 @@ namespace Full_GRASP_And_SOLID
 
         public Product FinalProduct { get; set; }
 
-        //Se modifica el método AddStep para cumplir con el patrón creator, este método instancia steps.
+        //Método AddStep modificado por patrón Creator.
         public IStep AddStep(Product product, int cuantity, Equipment equipment, int time)
         {
             IStep step = new Step(product, cuantity, equipment, time);

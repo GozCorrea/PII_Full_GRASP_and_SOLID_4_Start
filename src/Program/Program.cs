@@ -1,10 +1,4 @@
-﻿//-------------------------------------------------------------------------
-// <copyright file="Program.cs" company="Universidad Católica del Uruguay">
-// Copyright (c) Programación II. Derechos reservados.
-// </copyright>
-//-------------------------------------------------------------------------
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -41,8 +35,6 @@ namespace Full_GRASP_And_SOLID
 
             catalog.AddEquipmentToCatalog("Cafetera", 1000);
             catalog.AddEquipmentToCatalog("Hervidor", 2000);
-        }
-
-               
+        }      
     }
 }

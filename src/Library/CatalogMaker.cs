@@ -4,11 +4,11 @@ using System.Linq;
 
 namespace Full_GRASP_And_SOLID
 {
-
-
-    public class CatalogMaker
+        //Agregado por patron Creator
+        public class CatalogMaker
     {
-        public List<Product> productCatalog = new List<Product>();
+        private List<Product> productCatalog = new List<Product>();
+
         private List<Equipment> equipmentCatalog = new List<Equipment>();
 
         public void AddProductToCatalog(string description, double unitCost)
